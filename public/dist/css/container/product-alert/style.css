@@ -1,0 +1,45 @@
+.alert {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 700px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  padding: 24px 20px;
+  height: max-content;
+}
+.alert__info {
+  display: grid;
+  gap: 16px;
+}
+.alert__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.alert__text {
+  font-size: 16px;
+}
+.alert__btn {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+}
+.alert__link {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgb(62, 62, 253);
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 80%;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
