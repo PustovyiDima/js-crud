@@ -1,0 +1,41 @@
+<main>
+    <section class="list">
+        <h1 class="list__title">Список товарів</h1>
+        <div class="list__items">
+            {{#with data.products}}
+
+            {{#if isEmpty}}
+            <mark>Товари відсутні</mark>
+            {{else}}
+            {{#each list}}
+            <div class="list__item">
+                <div class="list__item__info">
+                    <h2 class="list__item__title">{{name}}</h2>
+                    <p class="list__item__description">{{description}}</p>
+                    <p class="list__item__id">ID: {{id}}</p>
+                </div>
+                <div class="list__item__price">
+                    <div class="price">{{price}}$</div>
+                    <a href="/product-edit?id={{id}}" class="edit__link">Редагувати</a>
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+            {{/with}}
+        </div>
+    </section>
+</main>
+
+<div class="user-list">
+    {{#with data.users}}
+    {{#if isEmpty}}
+    <mark>Пустий</mark>
+    {{else}}
+    <ul>
+        {{#each list}}
+        <li>{{email}} | {{login}} | {{id}} || <a href="/user-delete?id={{id}}">(видалити)</a></li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    {{/with}}
+</div>
