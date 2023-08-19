@@ -1,0 +1,60 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.heading__title {
+  font-size: 24px;
+  color: #000;
+}
+.heading__info {
+  font-size: 16px;
+  color: #000;
+}
+
+.divider {
+  border: 1px solid #ddd;
+  height: 1px;
+  width: 100%;
+}
+
+.purchase-list {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+.purchase-list__link {
+  text-decoration: none;
+}
+.purchase-list__item {
+  display: grid;
+  grid-template-columns: 150px 2fr 1fr 1fr;
+  gap: 20px;
+  min-height: 60px;
+  align-items: center;
+}
+.purchase-list__item__element {
+  display: grid;
+  gap: 12px;
+}
+
+.text {
+  font-size: 16px;
+  color: #000;
+  line-height: 150%;
+}
+.text__grey {
+  color: grey;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
