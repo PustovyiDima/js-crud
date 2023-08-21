@@ -1,0 +1,155 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.heading__title {
+  font-size: 24px;
+  color: #000;
+}
+.heading__info {
+  font-size: 16px;
+  color: #000;
+}
+
+.main-button {
+  background-color: rgb(62, 62, 253);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.main-button:hover {
+  opacity: 0.7;
+}
+
+.product-card {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.product-card__img {
+  max-height: 300px;
+  width: 100%;
+}
+.product-card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-card__subtitle {
+  font-size: 16px;
+  color: grey;
+}
+.product-card__category {
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: rgb(5, 5, 105);
+  border: 1px solid transparent;
+}
+.product-card__category--1 {
+  border-color: blue;
+  color: blue;
+}
+.product-card__category--2 {
+  border-color: green;
+  color: green;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.field__label {
+  font-size: 14px;
+}
+.field__input {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 10px;
+}
+.field--disabled {
+  display: none;
+}
+
+.divider {
+  border: 1px solid #ddd;
+  height: 1px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.page-container {
+  display: grid;
+  gap: 40px;
+}
+
+.product-info {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  align-items: flex-start;
+  gap: 12px;
+}
+.product-info__info {
+  display: grid;
+  gap: 16px;
+}
+.product-info__img {
+  max-width: 300px;
+  width: 100%;
+}
+.product-info__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-info__subtitle {
+  font-size: 16px;
+  color: grey;
+}
+.product-info__category {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: rgb(5, 5, 105);
+  border: 1px solid transparent;
+  width: fit-content;
+}
+.product-info__category--1 {
+  border-color: blue;
+  color: blue;
+}
+.product-info__category--2 {
+  border-color: green;
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */

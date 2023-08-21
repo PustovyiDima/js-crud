@@ -1,0 +1,65 @@
+<main class="main">
+    {{#with data}}
+    <form action="/purchase-update?id={{purchase.id}}" method="post" class="form">
+        {{>heading title="Інформація про замовлення"}}
+
+        <div class="form-item">
+            <p class="text text-grey">ID:</p>
+            <input readonly class="text " name="id" value={{purchase.id}}>
+        </div>
+        {{>divider}}
+        <div class="half">
+            <div class="form-item">
+                <p class="text text-grey">Ім'я:</p>
+                <input readonly class="text " name="firstname" value={{purchase.firstname}}>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Прізвище:</p>
+                <input readonly class="text " name="lastname" value={{purchase.lastname}}>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Телефон:</p>
+                <input readonly class="text " name="phone" value={{purchase.phone}}>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Електронна пошта:</p>
+                <input readonly class="text " name="email" value={{purchase.email}}>
+            </div>
+        </div>
+        {{>divider}}
+        <div>
+            <div class="form-item">
+                <p class="text text-grey">Адреса доставки:</p>
+                <p class="text ">вул. Центральна 14, кв. 36, м. Київ, 02000, Україна</p>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Назва товару:</p>
+                <p class="text ">{{purchase.product.title}}</p>
+            </div>
+        </div>
+        {{>divider}}
+        <div class="half">
+            <div class="form-item">
+                <p class="text text-grey">Вартість товарів:</p>
+                <p class="text ">{{purchase.productPrice}}</p>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Вартість доставки:</p>
+                <p class="text ">{{purchase.deliveryPrice}}</p>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Сма до сплати:</p>
+                <p class="text ">{{purchase.totalPrice}}</p>
+            </div>
+            <div class="form-item">
+                <p class="text text-grey">Нараховано бонуси:</p>
+                <p class="text ">{{bonus}}</p>
+            </div>
+        </div>
+        {{>divider}}
+
+        {{>button text="Змінити данні"}}
+
+    </form>
+    {{/with}}
+</main>
