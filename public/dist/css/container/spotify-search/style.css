@@ -1,0 +1,138 @@
+.header--link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.6s;
+}
+a:hover {
+  opacity: 0.6;
+}
+
+.main {
+  background-color: #000;
+  min-height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 24px 8px;
+}
+.main__content {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  font-size: 24px;
+}
+.title--center {
+  text-align: center;
+}
+.title--small {
+  font-size: 20px;
+}
+.title__large {
+  font-size: 40px;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 92px 1fr 42px;
+  gap: 28px;
+  align-items: center;
+}
+.track__list {
+  display: grid;
+  gap: 28px;
+}
+.track__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.track__name {
+  font-size: 24px;
+  color: #ddd;
+}
+.track__author {
+  font-size: 16px;
+  color: #bdbdbd;
+}
+
+.playlists__list {
+  display: grid;
+}
+.playlists__list__item {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+.playlists__list__item--image {
+  width: 100%;
+}
+.playlists__list__item--description {
+  display: grid;
+  gap: 20px;
+}
+.playlists__list__item--title {
+  font-size: 16px;
+}
+.playlists__list__item--info {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 56px 1fr 100px;
+  padding: 10px 32px;
+  gap: 32px;
+  background-color: #292929;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 8px;
+}
+.header .search_btn {
+  color: #fff;
+  transition: opacity 0.6s;
+}
+.header .search_btn:hover {
+  opacity: 0.6;
+}
+.header img {
+  filter: invert(67%) sepia(5%) saturate(0%) hue-rotate(265deg) brightness(102%) contrast(92%);
+}
+
+.playlists__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  column-gap: 54px;
+}
+.playlists__list__item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+.playlists__list__item--title {
+  font-size: 24px;
+}
+.playlists__list__item--info {
+  font-size: 16px;
+}
+.playlists__list__item--info img {
+  width: 8px;
+  height: 8px;
+  margin: 2px 4px;
+}
+
+/*# sourceMappingURL=style.css.map */

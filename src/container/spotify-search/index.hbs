@@ -1,0 +1,36 @@
+<main class="main">
+
+    <div class="main__content">
+        <div class="header--link">
+            <a href="/spotify-index" title="На головну">
+                <img src="/img/akar-icons_cross.svg" alt=""></a>
+        </div>
+        <h1 class="title title--center">Пошук плейліста</h1>
+        {{#with data}}
+        <form action="/spotify-search" method="post" class="header">
+            <img width="56px" height="56px" src="/img/search.svg" alt="">
+            <input type="text" placeholder="Пошук" name="text">
+            <button class="search_btn">Пошук </button>
+        </form>
+
+        <ul class="playlists__list">
+            {{#each playlists}}
+            <a href="/spotify-playlist?id={{id}}">
+                <li class="playlists__list__item">
+                    <img class="playlists__list__item--image" src="{{image}}" alt="" height="100px">
+                    <div class="playlists__list__item--description">
+                        <div class="playlists__list__item--title">{{name}}</div>
+                        <p class="playlists__list__item--info">Плейлист <img src="/img/Ellipse.svg">{{length}}
+                            пісень</p>
+                    </div>
+                </li>
+            </a>
+            {{/each}}
+        </ul>
+
+
+        {{/with}}
+
+
+    </div>
+</main>

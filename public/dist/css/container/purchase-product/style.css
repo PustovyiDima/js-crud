@@ -45,7 +45,7 @@
 }
 .product-card__subtitle {
   font-size: 16px;
-  color: grey;
+  color: #bdbdbd;
 }
 .product-card__category {
   padding: 8px 16px;
@@ -132,7 +132,7 @@
 }
 .product-info__subtitle {
   font-size: 16px;
-  color: grey;
+  color: #bdbdbd;
 }
 .product-info__category {
   display: inline-block;

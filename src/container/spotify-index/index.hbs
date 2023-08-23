@@ -1,0 +1,36 @@
+<main class="main">
+
+    <div class="main__content">
+        {{!-- <div class="header--link">
+            <a href="/spotify-index" title="На головну">
+                <img src="/img/akar-icons_cross.svg" alt=""></a>
+        </div> --}}
+
+        {{#with data}}
+        <div class="header">
+            <h1 class="title__large">Моя бібліотека</h1>
+            <a href="/spotify-search">
+                <img width="56px" height="56px" src="/img/search.svg" alt=""></a>
+            <a href="/spotify-choose">
+                <img width="56px" height="56px" src="/img/create.svg" alt=""></a>
+        </div>
+        <ul class="playlists__list">
+            {{#each playlists}}
+            <a href="/spotify-playlist?id={{id}}">
+                <li class="playlists__list__item">
+                    <img class="playlists__list__item--image" src="{{image}}" alt="">
+                    <div class="playlists__list__item--description">
+                        <div class="playlists__list__item--title">{{name}}</div>
+                        <p class="playlists__list__item--info">{{length}} пісень</p>
+                    </div>
+                </li>
+            </a>
+            {{/each}}
+        </ul>
+
+
+        {{/with}}
+
+
+    </div>
+</main>

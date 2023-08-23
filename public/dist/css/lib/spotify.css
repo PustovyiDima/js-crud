@@ -1,0 +1,92 @@
+.header--link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.6s;
+}
+a:hover {
+  opacity: 0.6;
+}
+
+.main {
+  background-color: #000;
+  min-height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 24px 8px;
+}
+.main__content {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  font-size: 24px;
+}
+.title--center {
+  text-align: center;
+}
+.title--small {
+  font-size: 20px;
+}
+.title__large {
+  font-size: 40px;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 92px 1fr 42px;
+  gap: 28px;
+  align-items: center;
+}
+.track__list {
+  display: grid;
+  gap: 28px;
+}
+.track__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.track__name {
+  font-size: 24px;
+  color: #ddd;
+}
+.track__author {
+  font-size: 16px;
+  color: #bdbdbd;
+}
+
+.playlists__list {
+  display: grid;
+}
+.playlists__list__item {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+.playlists__list__item--image {
+  width: 100%;
+}
+.playlists__list__item--description {
+  display: grid;
+  gap: 20px;
+}
+.playlists__list__item--title {
+  font-size: 16px;
+}
+.playlists__list__item--info {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+/*# sourceMappingURL=spotify.css.map */

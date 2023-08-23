@@ -1,0 +1,28 @@
+<main class="main">
+    <div class="main__content">
+        <div class="header--link">
+            <a href="/spotify-index" title="На головну">
+                <img src="/img/akar-icons_cross.svg" alt=""></a>
+        </div>
+        {{#with data}}
+        <h1 class="title title--center ">Додати до плейліста</h1>
+
+        <ul class="track__list track__list--background">
+            {{#each tracks}}
+            <li class="track">
+                <img src={{image}} alt="">
+                <div class="track__content">
+                    <strong class="track__name">{{name}}</strong>
+                    <em class="track__author text--grey">{{author}}</em>
+                </div>
+                <a href="/spotify-track-add?playListId={{../playListId}}&trackId={{id}}">
+                    <img src="/img/add__btn.svg" alt="">
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+
+
+        {{/with}}
+    </div>
+</main>

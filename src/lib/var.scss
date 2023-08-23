@@ -1,12 +1,12 @@
 $colorMap: (
-    light: #ddd,
-    primary:rgb(62, 62, 253),
-    dark-primary:rgb(5, 5, 105),
-    grey:grey,
-
+  light: #ddd,
+  primary: rgb(62, 62, 253),
+  dark-primary: rgb(5, 5, 105),
+  grey: #bdbdbd,
+  white: white,
+  dark: #000,
 );
 
-
 @function color($key) {
-    @return map-get($colorMap, $key)
+  @return map-get($colorMap, $key);
 }

@@ -1,0 +1,16 @@
+<main class="main">
+    <div class="main__content">
+        <div class="header--link">
+            <a href="/spotify-index" title="На головну">
+                <img src="/img/akar-icons_cross.svg" alt=""></a>
+        </div>
+
+        <h1 class="title title--center title--small">Назвіть плейліст</h1>
+
+        <form action="/spotify-create{{#if data.isMix}}?isMix=true{{/if}}" method="post" class="form">
+            <input required type="text" class="form__field" placeholder="Назва" name="name">
+
+            <button class="form__button">Створити</button>
+        </form>
+    </div>
+</main>
