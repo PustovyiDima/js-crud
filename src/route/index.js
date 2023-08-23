@@ -936,7 +936,6 @@ class PlayList {
     this.name = name
     this.tracks = tracks
     this.image = image
-    this.length = tracks.length
   }
 
   static create = (
@@ -959,7 +958,6 @@ class PlayList {
       .sort(() => 0.5 - Math.random())
       .slice(0, 3)
     playList.tracks.push(...randomTracks)
-    playList.length = playList.tracks.length
   }
 
   static getById = (id) => {
@@ -974,18 +972,13 @@ class PlayList {
     this.tracks = this.tracks.filter(
       (track) => track.id !== trackId,
     )
-    this.length = this.tracks.length
   }
 
   addTrackById = (trackId) => {
     const track = Track.getById(Number(trackId))
     this.tracks.push(track)
-    this.length = this.tracks.length
-    // return this.tracks
-  }
 
-  getTracksLength = () => {
-    return this.length
+    // return this.tracks
   }
 
   static searchListByValue = (value) => {
@@ -1009,29 +1002,44 @@ PlayList.create('Інь Янь', '/img/JinJan.png')
 //=======================================================================
 router.get('/spotify-index', function (req, res) {
   const playlists = PlayList.getList()
-  console.log(playlists)
   res.render('spotify-index', {
     style: 'spotify-index',
-    data: { playlists },
+    data: {
+      playlists: playlists.map(({ tracks, ...rest }) => ({
+        ...rest,
+        amount: tracks.length,
+      })),
+    },
   })
 })
 //=======================================================================
 router.get('/spotify-search', function (req, res) {
-  const playlists = PlayList.getList()
-  console.log(playlists)
+  const value = ''
+  const playlists = PlayList.searchListByValue(value)
   res.render('spotify-search', {
     style: 'spotify-search',
-    data: { playlists },
+    data: {
+      playlists: playlists.map(({ tracks, ...rest }) => ({
+        ...rest,
+        amount: tracks.length,
+      })),
+      value,
+    },
   })
 })
 
 router.post('/spotify-search', function (req, res) {
-  const text = req.body.text
-  const playlists = PlayList.searchListByValue(text)
-  console.log(playlists)
+  const value = req.body.value
+  const playlists = PlayList.searchListByValue(value)
   res.render('spotify-search', {
     style: 'spotify-search',
-    data: { playlists },
+    data: {
+      playlists: playlists.map(({ tracks, ...rest }) => ({
+        ...rest,
+        amount: tracks.length,
+      })),
+      value,
+    },
   })
 })
 //=======================================================================
@@ -1111,7 +1119,6 @@ router.get('/spotify-playlist', function (req, res) {
       playListId: playlist.id,
       tracks: playlist.tracks,
       name: playlist.name,
-      length: playlist.getTracksLength(),
     },
   })
 })
