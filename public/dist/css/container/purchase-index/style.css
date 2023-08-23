@@ -45,7 +45,7 @@
 }
 .product-card__subtitle {
   font-size: 16px;
-  color: grey;
+  color: #bdbdbd;
 }
 .product-card__category {
   padding: 8px 16px;
@@ -71,13 +71,6 @@
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-}
-
-.product-list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

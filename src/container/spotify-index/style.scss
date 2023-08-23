@@ -1,0 +1,15 @@
+@use '../../lib/service.scss' as s;
+@use '../../lib/spotify.scss' as spotify;
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 56px 56px;
+  gap: 32px;
+}
+.playlists__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 54px;
+}
+

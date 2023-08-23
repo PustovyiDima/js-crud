@@ -1,0 +1,106 @@
+@use '../lib/service.scss' as s;
+
+.header--link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: s.color(white);
+  transition: opacity 0.6s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.main {
+  background-color: s.color(dark);
+  min-height: 100%;
+  color: s.color(white);
+
+  display: flex;
+  justify-content: center;
+
+  padding: s.space(6) s.space(2);
+
+  &__content {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+  }
+}
+
+.title {
+  font-size: 24px;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--small {
+    font-size: 20px;
+  }
+
+  &__large {
+    font-size: 40px;
+  }
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 92px 1fr 42px;
+  gap: s.space(7);
+  align-items: center;
+
+  &__list {
+    display: grid;
+    gap: s.space(7);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: s.space(2);
+  }
+
+  &__name {
+    font-size: 24px;
+    color: s.color(light);
+  }
+  &__author {
+    font-size: 16px;
+    color: s.color(grey);
+  }
+}
+
+.playlists__list {
+  display: grid;
+  &__item {
+    width: 100%;
+    display: grid;
+    gap: s.space(5);
+
+    &--image {
+      width: 100%;
+    }
+
+    &--description {
+      display: grid;
+      gap: s.space(5);
+    }
+
+    &--title {
+      font-size: 16px;
+    }
+
+    &--info {
+      font-size: 12px;
+      color: s.color(grey);
+    }
+  }
+}
